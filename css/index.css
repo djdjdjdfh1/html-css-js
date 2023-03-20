@@ -4,6 +4,12 @@
     font-weight: 700;
     font-style: normal;
 }
+@font-face {
+    font-family: 'KyoboHandwriting2021sjy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* 태그에 대한 디자인 */
 h1 {
@@ -24,8 +30,40 @@ h1 {
     text-align: center;
 }
 
+/* todolist 디자인 */
+#todolist {
+    margin: auto; /* 중앙정렬 */
+    max-width: 500px;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+#todolist li {
+    font-family: 'KyoboHandwriting2021sjy';
+    clear: both;
+    margin: 5px 0;
+    /*display: flex;
+    justify-content: space-between;*/
+    font-size: 1.5rem;
+    color : white;
+}
+#todolist li span {
+    float: right;
+    margin-top: 8px;
+    font-size: 0.7rem;
+    position: relative;
+    right: 20px;
+}
+#todolist li button {
+    background-color: transparent;
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
 /* input[type='text'], [type='submit']*/
 input[type='text'] {
+    font-family: 'KyoboHandwriting2021sjy';
     background-color: transparent;
     border: none;
     border-bottom: white 1px solid;
