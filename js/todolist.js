@@ -37,4 +37,27 @@ function todoAdd(event) {
     // input의 value값을 ""로 바꿈
     todoForm.firstElementChild.value = "";
 
+    // check에 클릭이벤트 추가
+    check.addEventListener("click", todoCheck);
+    button.addEventListener("click", todoDelete);
+}
+
+// check에 들어가는 todoCheck 함수 작성
+function todoCheck(e) {
+    // 이벤트 객체를 통해서 이벤트가 실행된 태그 찾아서 값 사용
+    const check = e.target;
+    const li = check.parentNode;
+    if(check.checked) {
+        li.style.color = "lightgray";
+    } else {
+        check.parentNode.style.color = "";
+    }
+}
+
+// 버튼에 클릭이벤트를 추가해서
+// 선택된 li가 삭제되는 함수 작성 remove()
+function todoDelete(e) {
+    const button = e.target;
+    const li = button.parentNode;
+    li.remove();
 }
