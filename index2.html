@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index2.css" />
+  </head>
+  <body>
+    <h1 id="clock">00:00:00</h1>
+    <form id="workout-text" action="">
+      <input
+        id="workout"
+        type="text"
+        placeholder="오늘 운동한 부위를 입력하세요."
+        size="30"
+        required
+      />
+      <input type="submit" value="입력" />
+    </form>
+    <h1 id="workout-h1" class="hidden">오늘의 운동 :</h1>
+
+    <form action="" id="workout-add" class="hidden">
+      <input
+        type="text"
+        placeholder="운동리스트를 추가하세요."
+        size="30"
+        required
+      />
+      <input type="submit" value="추가" />
+    </form>
+
+    <ul id="workout-list" class="hidden"></ul>
+
+    <form id="complete" class="hidden" action="">
+      <input class="" type="submit" value="저장" />
+    </form>
+    <h1>수고하셨습니다!</h1>
+
+    <script src="./js/clock2.js"></script>
+    <script src="./js/background2.js"></script>
+    <script src="./js/text.js"></script>
+    <script src="./js/add.js"></script>
+  </body>
+</html>

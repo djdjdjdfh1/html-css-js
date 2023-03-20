@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KyoboHandwriting2021sjy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    font-family: 'TheJamsil5Bold';
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+}
+ul {
+    margin: auto;
+    width: 500px;
+}
+li {
+    font-family: 'KyoboHandwriting2021sjy';
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+input[type="submit"] {
+    margin: 5px 0;
+}
+.hidden {
+    display: none;
+}
+#clock {
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+#workout-text, #workout-add, #complete {
+    text-align: center;
+}
