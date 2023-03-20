@@ -20,6 +20,11 @@ function onLogin (event) {
     greeting.innerHTML += " "+ loginId.value+"님";
     // greeting.innerHTML = `환영합니다 ${loginId.value}님`;
 
+    // 화면에 글자를 보여주기 위해 classList 추가
     greeting.classList.remove("hidden");
+    document.querySelector("#todo-form").classList.remove("hidden");
+    document.querySelector("#todolist").classList.remove("hidden");
+    
+    // 로그인 창을 보이지않게 하기위해 class 추가
     loginForm.classList.add("hidden");
 }

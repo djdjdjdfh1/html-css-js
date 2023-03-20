@@ -25,10 +25,15 @@ function todoAdd(event) {
     const text = document.createTextNode(todoValue);
     const button = document.createElement("button");
     button.innerHTML ="X";
+    // 시간을 추가하기위한 span태그
+    const time = document.createElement("span");
+    // 다른 자바스크립트에서 작성한 함수를 가져와 쓸수있다
+    time.innerHTML = getClock();
 
     // li태그에 생성한 태그 추가
     li.appendChild(check);
     li.appendChild(text);
+    li.appendChild(time);
     li.appendChild(button);
     
     // document.querySelector("#todolist") : ul

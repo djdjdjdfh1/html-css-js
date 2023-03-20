@@ -15,11 +15,17 @@ function getClock() {
     let second = String(date.getSeconds()).padStart(2,"0");
 
     // clock에 현재 시간을 출력
-    clock.innerHTML = `${hour}:${minute}:${second}`;
+    //clock.innerHTML = `${hour}:${minute}:${second}`;
+
+    // return을 통해 시간을 문자열로 돌려줄 수 있다
+    // return값을 이용해서 clock.innerHTML = getClock();
+    return `${hour}:${minute}:${second}`;
 
 }
 
 // 타이머 함수를 통해서 1초마다 시간을 받아오게 작성
-setInterval(getClock, 1000);
+setInterval(function() {
+    clock.innerHTML = getClock();
+}, 1000);
 // 타이머는 1초 뒤에 실행하기에, 화면에 바로 출력하기위해 함수 호출
-getClock();
+clock.innerHTML = getClock();

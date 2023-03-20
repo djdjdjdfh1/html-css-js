@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
@@ -17,20 +18,15 @@
     </form>
     <!-- 인사 : 로그인 후에 보임 -->
     <h1 id="greeting" class="hidden">환영합니다</h1>
+
     <!-- 할일 입력창-->
-    <form id="todo-form" action="">
+    <form id="todo-form" action="" class="hidden">
       <input type="text" placeholder="할일을 입력해주세요" required />
       <input type="submit" value="할일" />
     </form>
 
     <!-- 할일 리스트가 입력될 공간 -->
-    <ul id="todolist">
-      <li>
-        <input type="checkbox" />
-        값
-        <button>X</button>
-      </li>
-    </ul>
+    <ul id="todolist" class="hidden"></ul>
 
     <script src="./js/background.js"></script>
     <script src="./js/clock.js"></script>
