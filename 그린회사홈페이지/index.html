@@ -11,25 +11,44 @@
   <body>
     <header class="header">
       <!-- 고정 네비게이션 바 시작 -->
-      <nav class="nav"></nav>
+      <nav id="nav" class="nav">
+        <div class="logo">GREEN</div>
+        <ul class="nav-menu">
+          <li><a href="#intro">소개</a></li>
+          <li><a href="#pictures">사진</a></li>
+          <li><a href="#news">뉴스</a></li>
+        </ul>
+      </nav>
       <!-- 고정 네이게이션 바 끝 -->
     </header>
     <main class="main">
-      <!-- 섹션1 배너 시작 -->
-      <section class="banner"></section>
+      <!-- 섹션1 배너(슬라이더) 시작 -->
+      <section class="banner">
+        <div class="slider">
+          <div class="slider-item"></div>
+          <div class="slider-item"></div>
+          <div class="slider-item"></div>
+        </div>
+      </section>
       <!-- 섹션1 배너 끝-->
+
       <!-- 섹션2 소개(스크롤 이벤트) 시작 -->
       <section class="intro-scroll"></section>
       <!-- 섹션2 소개(스크롤 이벤트) 끝 -->
+
       <!-- 섹션3 사진(슬라이더 버튼) -->
       <section class="pictures"></section>
       <!-- 섹션3 사진 끝 -->
+
       <!-- 섹션4 뉴스(스크롤 이벤트) 시작 -->
       <section class="news-scroll"></section>
       <!-- 섹션4 뉴스 끝-->
+
       <!-- 푸터 시작 -->
       <footer class="footer"></footer>
       <!-- 푸터 끝 -->
     </main>
+
+    <script src="./js/scroll.js"></script>
   </body>
 </html>
