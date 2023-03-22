@@ -1,0 +1,51 @@
+/* slider 디자인 */
+.slider {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* slider의 바깥으로 빠져나가는 slider item을 보이지 않게함 */
+    overflow: hidden;
+}
+
+/* slider item */
+.slider-item {
+    width: 100%;
+    height: 100vh;
+    /* flex의 컨테이너보다 item 크기가 클때 넓이를 바뀌지않게 사용 */
+    flex-shrink: 0;
+
+    /* slider-item의 위치를 옮김 */
+    position: relative;
+    /* left의 위치를 0, -100%, -200% 이용하여 이동*/
+    left: 0;
+    transition: all 1s;
+}
+
+/* slider-button 디자인 */
+.slider-button {
+    position: absolute;
+    top: 45%;
+    font-size: 5rem;
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+/* 슬라이더 이미지 */
+.slider>.slider-item:nth-child(1) {
+    background-image: url(../../투두리스트/img/1.jpg);
+    background-size: cover;
+}
+.slider>.slider-item:nth-child(2) {
+    background-image: url(../../투두리스트/img/0.jpg);
+    background-size: cover;
+}
+.slider>.slider-item:nth-child(3) {
+    background-image: url(../../투두리스트/img/2.jpg);
+    background-size: cover;
+}

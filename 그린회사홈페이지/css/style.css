@@ -1,4 +1,8 @@
 /* 태그 디자인 */
+/* 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
 a {
     color: black;
     text-decoration: none;
@@ -8,6 +12,7 @@ a {
 .header {
     position: fixed;
     width: 100vw;
+    z-index: 10;
 } 
 .nav {
     /* 네브크기 잘 설정해야함 */
