@@ -1,0 +1,14 @@
+/* 태그 디자인 */
+
+
+/* 헤더와 네비게이션바 */
+.header {
+    background-color: cadetblue;
+} 
+.nav {
+    /* 네브크기 잘 설정해야함 */
+    height: 80px;
+    background-color: bisque;
+}
+
+/* 메인의 섹션 */
