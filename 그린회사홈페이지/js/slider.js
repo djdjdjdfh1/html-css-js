@@ -1,38 +1,31 @@
-/* 슬라이더 버튼을 눌렀을때 화면 전환 */
-const prevButton = document.querySelector("#prev-button");
-const nextButton = document.querySelector("#next-button");
+/* 스크롤 이벤트 작성 */
+// 스크롤 할때마다 실행되는 함수도 함께 작성
 
-// 슬라이더 아이템
-const sliderItems = document.querySelectorAll(".slider-item");
+// 네비게이션 바 
+const nav = document.querySelector("#nav");
+// 섹션2 인트로 
+const intro = document.querySelector("#intro");
+// 섹션4 뉴스
+const news = document.querySelector("#news");
 
-// 전체 슬라이더 갯수
-const maxSlide = sliderItems.length;
-
-// 현재 슬라이더를 알려주기 위한 변수
-let currentSlide = 1;
-
-// 버튼을 눌렀을때 left의 값을 이동
-nextButton.addEventListener("click", function() {
-    // 현재 슬라이더가 전체갯수보다 작을때 실행
-    if(currentSlide < maxSlide) {
-        currentSlide++; 
-        // 2 => -100%, 3 => -200%, 4 => -300%    >>>>>> 화면의 넓이 곱해서 이동도 가능 
-        // sliderItmes를 통해서 모든 left값을 이동 
-        for( let i = 0; i<sliderItems.length; i++) {
-            sliderItems[i].style.left = `${100+(-100)*currentSlide}%`;
-        }
+/**
+ * 스크롤 이벤트로 조건을 걸때 사용할수 있는 속성
+ * 스크롤의 Y 위치 : scrollY, 
+ * 전체 스크롤 길이 : 
+ * 화면의 길이 : innerHeight,
+ */
+window.addEventListener("scroll", function(){
+    if(this.scrollY >= 200) {
+        // scrollY가 200 이상 스크롤 되면 scrollon 클래스 추가
+        nav.classList.add("scrollon");
+        intro.classList.add("scrollon");
+    } else {
+        // scrollY가 200 미만이면 scrollon 제거
+        nav.classList.remove("scrollon");
     }
-})
-
-// 이전 버튼
-prevButton.addEventListener("click", function() {
-    // 현재 슬라이더가 전체갯수보다 작을때 실행
-    if(currentSlide > 1) {
-        currentSlide--; 
-        // 2 => -100%, 3 => -200%, 4 => -300%    >>>>>> 화면의 넓이 곱해서 이동도 가능 
-        // sliderItmes를 통해서 모든 left값을 이동 
-        for( let i = 0; i<sliderItems.length; i++) {
-            sliderItems[i].style.left = `${100+(-100)*currentSlide}%`;
-        }
+    
+    if(this.scrollY>1000) {
+        news.classList.add("scrollon");
     }
-})
+
+} )
